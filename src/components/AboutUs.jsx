@@ -1,6 +1,6 @@
 import React from 'react';
-import { 
-  ShieldCheck, Cpu, Flame, Users, Sparkles, 
+import {
+  ShieldCheck, Cpu, Flame, Users, Sparkles,
   Code2, Heart, Award, Rocket, CheckCircle2, Globe,
   User
 } from 'lucide-react';
@@ -101,9 +101,9 @@ export default function AboutUs() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem' }}>
           {techStack.map((tech, idx) => (
-            <div 
-              key={idx} 
-              className="glass-panel-subtle" 
+            <div
+              key={idx}
+              className="glass-panel-subtle"
               style={{ padding: '1.25rem', borderLeft: `3px solid ${tech.color}`, transition: 'var(--transition-normal)' }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.4rem' }}>
@@ -132,20 +132,20 @@ export default function AboutUs() {
           </p>
         </div>
 
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', 
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
           gap: '1.5rem',
           alignItems: 'stretch'
         }}>
           {teamMembers.map((member, idx) => {
             const IconComponent = member.icon;
             return (
-              <div 
-                key={idx} 
-                className="content-card" 
-                style={{ 
-                  padding: '1.6rem', 
+              <div
+                key={idx}
+                className="content-card"
+                style={{
+                  padding: '1.6rem',
                   textAlign: 'center',
                   display: 'flex',
                   flexDirection: 'column',
@@ -154,47 +154,47 @@ export default function AboutUs() {
                   borderRadius: '16px'
                 }}
               >
-                <div style={{ 
-                  width: '92px', 
-                  height: '92px', 
-                  borderRadius: '50%', 
-                  margin: '0 auto 1.1rem auto', 
+                <div style={{
+                  width: '92px',
+                  height: '92px',
+                  borderRadius: '50%',
+                  margin: '0 auto 1.1rem auto',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   background: 'radial-gradient(circle, rgba(255, 77, 45, 0.25) 0%, rgba(30, 10, 6, 0.9) 100%)',
-                  border: '3px solid #ff4d2d', 
-                  boxShadow: '0 0 22px rgba(255, 77, 45, 0.5)' 
+                  border: '3px solid #ff4d2d',
+                  boxShadow: '0 0 22px rgba(255, 77, 45, 0.5)'
                 }}>
                   <IconComponent size={42} color="#ff684a" strokeWidth={2.2} />
                 </div>
 
-              <h4 style={{ fontSize: '1.2rem', color: '#ffffff', fontWeight: 800, marginBottom: '0.25rem' }}>
-                {member.name}
-              </h4>
-              <span style={{ fontSize: '0.82rem', color: '#ff684a', fontWeight: 700, display: 'block', marginBottom: '0.75rem' }}>
-                {member.role}
-              </span>
+                <h4 style={{ fontSize: '1.2rem', color: '#ffffff', fontWeight: 800, marginBottom: '0.25rem' }}>
+                  {member.name}
+                </h4>
+                <span style={{ fontSize: '0.82rem', color: '#ff684a', fontWeight: 700, display: 'block', marginBottom: '0.75rem' }}>
+                  {member.role}
+                </span>
 
-              <div style={{ 
-                background: 'rgba(255, 77, 45, 0.1)', 
-                border: '1px solid rgba(255, 77, 45, 0.25)',
-                padding: '0.45rem 0.75rem', 
-                borderRadius: '8px', 
-                marginBottom: '0.85rem', 
-                fontSize: '0.75rem', 
-                color: '#ffedd5',
-                fontWeight: 600
-              }}>
-                ⭐ Favorite: {member.fandom}
+                <div style={{
+                  background: 'rgba(255, 77, 45, 0.1)',
+                  border: '1px solid rgba(255, 77, 45, 0.25)',
+                  padding: '0.45rem 0.75rem',
+                  borderRadius: '8px',
+                  marginBottom: '0.85rem',
+                  fontSize: '0.75rem',
+                  color: '#ffedd5',
+                  fontWeight: 600
+                }}>
+                  ⭐ Favorite: {member.fandom}
+                </div>
+
+                <p style={{ fontSize: '0.82rem', color: 'rgba(255, 255, 255, 0.75)', lineHeight: 1.55, margin: 0, marginTop: 'auto' }}>
+                  {member.bio}
+                </p>
               </div>
-
-              <p style={{ fontSize: '0.82rem', color: 'rgba(255, 255, 255, 0.75)', lineHeight: 1.55, margin: 0, marginTop: 'auto' }}>
-                {member.bio}
-              </p>
-            </div>
-          );
-        })}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -880,5 +880,13 @@ button *,
   }
 }
 
+/* Hide scroll hint indicator per user request */
+.fv-scroll-hint,
+[class*="scroll-hint"],
+[class*="scroll-indicator"] {
+  display: none !important;
+}
+
+
 
 
